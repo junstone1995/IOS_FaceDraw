@@ -23,8 +23,18 @@ class FaceView: UIView {
     @IBInspectable
     var lineWidth:CGFloat = 5.0{didSet{setNeedsDisplay()}}
     
+    @objc func changeScale(recognizer: UIPinchGestureRecognizer){
+        switch recognizer.state {
+        case .changed, .ended:
+            scale *= recognizer.scale
+            recognizer.scale = 1.0
+        default:
+            break
+        }
+    }
+    
     private var skullRadius:CGFloat{
-        return min(bounds.size.width, bounds.size.height) / 2
+        return (min(bounds.size.width, bounds.size.height) / 2) * scale
     }
     private var skullCenter:CGPoint{
         return CGPoint(x : bounds.midX, y : bounds.midY)
@@ -127,12 +137,12 @@ class FaceView: UIView {
         
         color.set()
         let skull = pathForCircleCenteredAtPoint(midPoint: skullCenter, withRadius: skullRadius)
-        skull.stroke()
         pathForEye(eye: .Left).stroke()
         pathForEye(eye: .Right).stroke()
         pathForMouth().stroke()
         pathForBrow(eye: .Left).stroke()
         pathForBrow(eye: .Right).stroke()
+        skull.stroke()
     }
 
 }
