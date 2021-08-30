@@ -14,6 +14,7 @@
 		AF8DDEE326D93361002A3055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8DDEE226D93361002A3055 /* Assets.xcassets */; };
 		AF8DDEE626D93361002A3055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8DDEE426D93361002A3055 /* LaunchScreen.storyboard */; };
 		AF8DDEF026D9346C002A3055 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8DDEEF26D9346C002A3055 /* FaceView.swift */; };
+		AFB86F8026DCFA6A0050D4AE /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB86F7F26DCFA6A0050D4AE /* FacialExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AF8DDEE526D93361002A3055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF8DDEE726D93361002A3055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF8DDEEF26D9346C002A3055 /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		AFB86F7F26DCFA6A0050D4AE /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				AF8DDEEE26D9338D002A3055 /* Supporting */,
 				AF8DDEDD26D9335C002A3055 /* FaceViewController.swift */,
 				AF8DDEDF26D9335C002A3055 /* Main.storyboard */,
+				AFB86F7F26DCFA6A0050D4AE /* FacialExpression.swift */,
 				AF8DDEEF26D9346C002A3055 /* FaceView.swift */,
 			);
 			path = FaceIt;
@@ -150,6 +153,7 @@
 			files = (
 				AF8DDEDE26D9335C002A3055 /* FaceViewController.swift in Sources */,
 				AF8DDEDA26D9335C002A3055 /* AppDelegate.swift in Sources */,
+				AFB86F8026DCFA6A0050D4AE /* FacialExpression.swift in Sources */,
 				AF8DDEDC26D9335C002A3055 /* SceneDelegate.swift in Sources */,
 				AF8DDEF026D9346C002A3055 /* FaceView.swift in Sources */,
 			);
