@@ -47,10 +47,12 @@ class FaceViewController: UIViewController {
         expression.mouth = expression.mouth.sadderMouth()
     }
 
-    
     private var mouthCurvatures = [FacialExpression.Mouth.Frown : -1.0, .Grin: 0.5, .Smile : 1.0 ,.Smirk: -0.5, .Neutral: 0.0]
+    
     private var eyeBrowTilts = [FacialExpression.EyeBrows.Relaxed:0.5,.Furrowed:-0.5,.Normal:0.0]
+    
     private func updateUI() {
+        if faceView != nil{
         switch expression.eyes{
         case .Open : faceView.eyeOpen = true
         case .Closed : faceView.eyeOpen = false
@@ -58,6 +60,7 @@ class FaceViewController: UIViewController {
         }
         faceView.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
         faceView.eyeBrowTilt = eyeBrowTilts[expression.eyeBrows] ?? 0.0
+    }
     }
 }
 
